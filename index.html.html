@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BBEA Professional Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; background:#f5f7fa; }
+    .topbar { background:#1f2d3d; color:#fff; padding:12px 24px; display:flex; justify-content:space-between; align-items:center; }
+    .nav-links a { color:#cfe7ff; margin-right:18px; text-decoration:none; font-weight:600; }
+    .nav-links a:hover { color:#f1c40f; }
+    .hero { background: linear-gradient(135deg, #3498db, #2c3e50); color:#fff; padding:80px 20px; text-align:center; }
+    .hero h1 { font-size:40px; font-weight:700; }
+    .hero p { font-size:18px; opacity:0.95; }
+    .notice { background:#0b69a3; color:#fff; padding:10px 20px; font-weight:700; overflow:hidden; white-space:nowrap; }
+    .marquee { display:inline-block; padding-left:100%; animation: marquee 14s linear infinite; }
+    @keyframes marquee { 0%{ transform:translateX(0);} 100%{ transform:translateX(-100%);} }
+    .cards { margin-top:-20px; padding: 40px 24px 60px; max-width:1150px; margin-left:auto; margin-right:auto; }
+    .card-portal { border-radius:12px; box-shadow:0 8px 30px rgba(31,45,61,0.08); transition:transform .25s, box-shadow .25s; }
+    .card-portal:hover { transform: translateY(-6px); box-shadow:0 10px 16px rgba(0,0,0,0.15); }
+    .card-portal h5 { font-weight:600; margin-bottom:10px; }
+    .portal-footer { background:#15232b; color:#cfe7ff; padding:30px; margin-top:40px; }
+    .portal-footer a { color:#eaf6ff; text-decoration:none; }
+    @media (max-width:768px){ .hero h1{font-size:26px} .hero p{font-size:14px} }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div style="font-weight:700; font-size:18px">Bronson And Brown English Academy <span style="font-size:12px; color:#9fb7d6">(Forms Portal)</span></div>
+    <div class="nav-links">
+      <a href="#">Home</a><a href="#forms">Forms</a><a href="#notices">Notices</a><a href="#help">Helpdesk</a>
+    </div>
+  </div>
+
+  <section class="hero">
+    <h1>Welcome to the Official BBEA Forms Portal</h1>
+    <p>Centralized access to all institutional forms — quick, secure, and simple.</p>
+    <div class="mt-4">
+      <a class="btn btn-light btn-lg me-2" href="#forms"><i class="fa fa-file-lines"></i> View Forms</a>
+      <a class="btn btn-outline-light btn-lg" href="#custom"><i class="fa fa-envelope"></i> Contact IT</a>
+    </div>
+  </section>
+
+  <div class="notice" id="notices">
+    <div class="marquee">📢 Submit Exam Question Paper · 🖥 Lab Maintenance on Monday · ⚡ CPU Issue Reporting Updated · 🎓</div>
+  </div>
+
+  <div class="cards" id="forms">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card card-portal p-4 text-center">
+            <h5>Digisuit Usage</h5>
+            <p class="text-muted">Report usage of the digisuit systems.</p>
+            <a class="btn btn-primary" href="https://forms.gle/fS1DScKzMq4PKcDV6" target="_blank">Open Form</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-portal p-4 text-center">
+            <h5>CPU Issues Report</h5>
+            <p class="text-muted">Log hardware/software issues for lab CPUs.</p>
+            <a class="btn btn-primary" href="https://forms.gle/4FYNvzMhf6C2LE8EA" target="_blank">Open Form</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-portal p-4 text-center">
+            <h5>Lab Usage</h5>
+            <p class="text-muted">Reserve lab time and track usage.</p>
+            <a class="btn btn-primary" href="https://forms.gle/z9LPVwdV5gHdEZeH6" target="_blank">Open Form</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-portal p-4 text-center">
+            <h5>Exam</h5>
+            <p class="text-muted">Exam-related forms and scheduling requests.</p>
+            <a class="btn btn-primary" href="https://forms.gle/demo4" target="_blank">Open Form</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-portal p-4 text-center">
+            <h5>Question Paper Submission</h5>
+            <p class="text-muted">Upload question papers.</p>
+            <a class="btn btn-primary" href="https://forms.gle/EbsKJ1hVoVN5ApDT8" target="_blank">Open Form</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="custom">
+    <div class="custom-form mt-4 mb-5 p-4 bg-white rounded-3 shadow-sm">
+      <h3>Submit Your Query</h3>
+      <form method="POST" action="YOUR_WEB_APP_URL">
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input class="form-control" type="text" name="name" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input class="form-control" type="email" name="email" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Message</label>
+          <textarea class="form-control" name="message" rows="4" required></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="portal-footer text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>About</h5>
+          <p style="color:#bcdff6">Bronson And Brown English Academy — Forms portal for staff.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Contact</h5>
+          <p style="color:#bcdff6">Helpdesk: 6000154386<br>it@bbea.edu</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <p><a href="#forms">Forms</a> · <a href="#notices">Notices</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
